@@ -1,0 +1,124 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: #3d3d3d;
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+.card {
+  padding: 2em;
+}
+
+#app {
+  margin: 0 auto;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+}
+
+.currentRow {
+  background: #ebf2fe !important;
+}
+.pointer {
+  cursor: pointer;
+}
+
+/* 自定义滚动条样式 */
+::-webkit-scrollbar {
+  width: 5px; /* 滚动条宽度 */
+  height: 5px; /* 滚动条高度 */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* 滚动条轨道背景色 */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #999; /* 滚动条滑块背景色 */
+  border-radius: 6px; /* 滚动条滑块圆角 */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #888; /* 滚动条滑块悬停时的背景色 */
+}
+
+.ant-slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 24px;
+  margin: 0;
+}
+
+.ant-slider .ant-slider-rail,
+.ant-slider-step {
+  height: 2px;
+  border-radius: 2px;
+  background-color: #98a2b3;
+  opacity: 0.4;
+}
+.ant-slider-track {
+  height: 2px !important;
+  border-radius: 2px !important;
+  background-color: #98a2b3 !important;
+}
+.ant-slider:hover .ant-slider-rail {
+  background-color: #98a2b3 !important;
+}
+.ant-slider .ant-slider-handle {
+  &::before {
+    display: none;
+  }
+  &::after {
+    display: none;
+  }
+}
+.ant-typography {
+  margin-bottom: 0 !important;
+}
+
+[contenteditable] {
+  outline: 0px solid transparent;
+}
+
+.slide-fade-enter-active {
+  transition: all 0.3s ease-out;
+}
+
+.slide-fade-leave-active {
+  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+  transform: translateX(240px);
+  opacity: 0;
+}
